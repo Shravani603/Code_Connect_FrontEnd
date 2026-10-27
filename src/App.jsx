@@ -8,6 +8,7 @@ import '@shoelace-style/shoelace/dist/themes/light.css';
 import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path';
 import PreLoader from './components/Preloader';
 import Layout from './Layout';
+import About from './Pages/About';
 
 setBasePath('https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.14.0/cdn/');
 
@@ -26,6 +27,7 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path='/' element={<Layout/>}></Route>
+        <Route path='/about' element={<About/>}></Route>
         <Route path='/editor/:id' element={<EditorPage/>}></Route>
       </Routes>
       </BrowserRouter>

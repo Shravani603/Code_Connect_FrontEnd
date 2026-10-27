@@ -5,9 +5,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 import SlCopyButton from "@shoelace-style/shoelace/dist/react/copy-button";
 import SlInput from "@shoelace-style/shoelace/dist/react/input";
 import PreLoader from "../components/Preloader";
-import Header from "../components/Header";
-import BuyMeACoffeeButton from "../components/BuyMeACoffeeButton";
-
+import SiteNav from "../components/SiteNav";
 function Home() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -58,13 +56,8 @@ function Home() {
     
     <div className="homepage">
 {isLoading ? <PreLoader></PreLoader> : null}
-<div className="header">
-<div class="innerheader">
-  <img src="/faicon (1).png" alt="aa" />
-  <h2 className="code">Code Connect</h2>
-  <BuyMeACoffeeButton></BuyMeACoffeeButton>
-</div>
-</div>
+<SiteNav />
+      <main className="mainArea">
       <div className="formpage">
         <img className="homepageLogo" src="/faicon (1).png" alt="aa" />
         <h4 className="mainlabel">Paste Invitation Room ID</h4>
@@ -105,10 +98,11 @@ function Home() {
           </span>
         </div>
       </div>
+      </main>
       <footer>
         <h4>
           Built &nbsp;by&nbsp;
-          <a href="https://github.com/adivedpathak">Aditya</a>
+          <a href="https://github.com/Shravani603">Shravani</a>
         </h4>
       </footer>
     </div>
